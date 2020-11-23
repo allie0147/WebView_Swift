@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WKNavigationDelegate {
 
     // url text
     @IBOutlet weak var txtUrl: UITextField!
@@ -20,8 +20,28 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadWebPage("http://2sam.net")
+        myWebView.navigationDelegate = self
     }
 
+    // 웹 뷰가 로딩중일때 실행되는 func이다.
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        myActivityIndicator.startAnimating()
+        myActivityIndicator.isHidden = false
+    }
+    
+    // 웹 뷰가 로드 되었을 때 실행되는 func이다.
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        myActivityIndicator.stopAnimating()
+        myActivityIndicator.isHidden = true
+    }
+    
+    // 웹 뷰가 로딩 실패 했을 때 실행되는 func이다.
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        myActivityIndicator.stopAnimating()
+        myActivityIndicator.isHidden = true
+        print(error.localizedDescription)
+    }
+    
     func loadWebPage(_ url: String) {
         let myUrl = URL(string: url)
         let myReqeust = URLRequest(url: myUrl!)
@@ -41,8 +61,6 @@ class ViewController: UIViewController {
 
     //site2 button
     @IBAction func btnGoSite2(_ sender: UIButton) {
-
-
     }
 
     // html button
