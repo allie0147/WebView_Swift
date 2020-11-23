@@ -48,10 +48,25 @@ class ViewController: UIViewController, WKNavigationDelegate {
         myWebView.load(myReqeust)
     }
 
+    // url앞의 http / https 체크하는 func이다.
+    func checkUrl(_ url: String?) -> String {
+        var strUrl = url
+        let http = url?.hasPrefix("http://")
+        let https = url?.hasPrefix("https://")
+        if let checkHttp = http, let checkHttps = https {
+            if checkHttp { strUrl = "http://" + strUrl!
+            } else if checkHttps {
+                strUrl = "https://" + strUrl!
+            }
+        }
+        return strUrl!
+    }
+
     // go button
     @IBAction func btnGotoUrl(_ sender: UIButton) {
-
-
+        let myUrl = checkUrl(txtUrl.text)
+        txtUrl.text = ""
+        loadWebPage(myUrl)
     }
 
     //site1 button
@@ -97,5 +112,5 @@ class ViewController: UIViewController, WKNavigationDelegate {
     @IBAction func btnGoForward(_ sender: UIBarButtonItem) {
         myWebView.goForward()
     }
-
 }
+
