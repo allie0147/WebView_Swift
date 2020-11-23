@@ -28,20 +28,20 @@ class ViewController: UIViewController, WKNavigationDelegate {
         myActivityIndicator.startAnimating()
         myActivityIndicator.isHidden = false
     }
-    
+
     // 웹 뷰가 로드 되었을 때 실행되는 func이다.
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         myActivityIndicator.stopAnimating()
         myActivityIndicator.isHidden = true
     }
-    
+
     // 웹 뷰가 로딩 실패 했을 때 실행되는 func이다.
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         myActivityIndicator.stopAnimating()
         myActivityIndicator.isHidden = true
         print(error.localizedDescription)
     }
-    
+
     func loadWebPage(_ url: String) {
         let myUrl = URL(string: url)
         let myReqeust = URLRequest(url: myUrl!)
@@ -56,11 +56,12 @@ class ViewController: UIViewController, WKNavigationDelegate {
 
     //site1 button
     @IBAction func btnGoSite1(_ sender: UIButton) {
-
+        loadWebPage("https://blog.yagom.net/20/")
     }
 
     //site2 button
     @IBAction func btnGoSite2(_ sender: UIButton) {
+        loadWebPage("https://daheenallwhite.github.io/ios/2019/07/17/ios-framework/")
     }
 
     // html button
