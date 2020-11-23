@@ -72,8 +72,10 @@ class ViewController: UIViewController, WKNavigationDelegate {
 
     //file button
     @IBAction func btnLoadHtmlFile(_ sender: UIButton) {
-
-
+        let filePath = Bundle.main.path(forResource: "htmlView", ofType: "html")
+        let myUrl = URL(fileURLWithPath: filePath!)
+        let myRequest = URLRequest(url: myUrl)
+        myWebView.load(myRequest)
     }
 
     // stop button

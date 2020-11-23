@@ -14,6 +14,7 @@
 		24E89D0F256B8A6600E8307D /* WebView_1123.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24E89D0D256B8A6600E8307D /* WebView_1123.xcdatamodeld */; };
 		24E89D11256B8A6800E8307D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24E89D10256B8A6800E8307D /* Assets.xcassets */; };
 		24E89D14256B8A6800E8307D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E89D12256B8A6800E8307D /* LaunchScreen.storyboard */; };
+		24E89D21256BA6BB00E8307D /* htmlView.html in Resources */ = {isa = PBXBuildFile; fileRef = 24E89D20256BA6BB00E8307D /* htmlView.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		24E89D10256B8A6800E8307D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24E89D13256B8A6800E8307D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24E89D15256B8A6800E8307D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24E89D20256BA6BB00E8307D /* htmlView.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = htmlView.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				24E89D04256B8A6600E8307D /* AppDelegate.swift */,
 				24E89D06256B8A6600E8307D /* SceneDelegate.swift */,
 				24E89D08256B8A6600E8307D /* ViewController.swift */,
+				24E89D20256BA6BB00E8307D /* htmlView.html */,
 				24E89D0A256B8A6600E8307D /* Main.storyboard */,
 				24E89D10256B8A6800E8307D /* Assets.xcassets */,
 				24E89D12256B8A6800E8307D /* LaunchScreen.storyboard */,
@@ -127,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E89D21256BA6BB00E8307D /* htmlView.html in Resources */,
 				24E89D14256B8A6800E8307D /* LaunchScreen.storyboard in Resources */,
 				24E89D11256B8A6800E8307D /* Assets.xcassets in Resources */,
 				24E89D0C256B8A6600E8307D /* Main.storyboard in Resources */,
