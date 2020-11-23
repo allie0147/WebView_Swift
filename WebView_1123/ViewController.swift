@@ -66,8 +66,8 @@ class ViewController: UIViewController, WKNavigationDelegate {
 
     // html button
     @IBAction func btnLoadHtmlString(_ sender: UIButton) {
-
-
+        let htmlString = "<h1> HTML String </h1><p> String 변수를 이용한 웹 페이지 </p><p><a href = \"https://www.naver.com\">네이버</a>로 이동</p>"
+        myWebView.loadHTMLString(htmlString, baseURL: nil)
     }
 
     //file button
@@ -78,23 +78,22 @@ class ViewController: UIViewController, WKNavigationDelegate {
 
     // stop button
     @IBAction func btnStop(_ sender: UIBarButtonItem) {
-
-
+        myWebView.stopLoading()
     }
 
     // refresh button
     @IBAction func btnReload(_ sender: UIBarButtonItem) {
-
+        myWebView.reload()
     }
 
     // rewind button
     @IBAction func btnGoBack(_ sender: UIBarButtonItem) {
-
+        myWebView.goBack()
     }
 
     // fast-forward button
     @IBAction func btnGoForward(_ sender: UIBarButtonItem) {
-
+        myWebView.goForward()
     }
 
 }
